@@ -1,7 +1,7 @@
 // Query the element with class "screen"
 let window = document.getElementsByClassName(".screen");
 
-// List Clic event
+// List Clic event in Navegator
 document.addEventListener('click', (event) => {
 
     // Assign a width and height
