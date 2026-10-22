@@ -1,1 +1,0 @@
-let ultimoElemento = document.body.lastElementChild;
