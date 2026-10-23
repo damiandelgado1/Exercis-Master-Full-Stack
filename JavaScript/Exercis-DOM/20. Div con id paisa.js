@@ -1,1 +1,0 @@
-let parrafo = document.getElementById('paisa');
