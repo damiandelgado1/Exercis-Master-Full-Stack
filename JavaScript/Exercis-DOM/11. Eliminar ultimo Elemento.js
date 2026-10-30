@@ -2,8 +2,10 @@
 let myContainer = document.querySelector("body");
 
 // Delete the last element
-const lastElement = myContainer.lastElement;
+const lastElement = myContainer.lastElementChild;
 
 if (lastElement) {
     lastElement.remove();
+
+    console.log(lastElement);
 }

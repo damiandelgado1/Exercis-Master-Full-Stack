@@ -1,7 +1,13 @@
 // Query all "p" elements with class "preparado"
-let paragraphs = document.getElementsByClassName("p.preparado");
+let paragraphs = document.getElementsByClassName("preparado");
 
-// Include the class "porelasterisco" in the all "p"
-paragraphs.classList.add("porelasterisco");
-
-console.log(paragraphs);
+for (let paragraph of paragraphs) {
+    
+    if (paragraph.classList.contains("preparado")) {
+        
+        // Include the class "porelasterisco" in the all "p"
+        paragraph.classList.add("porelasterisco");
+        
+        console.log(paragraph);
+    }
+}

@@ -1,5 +1,5 @@
 // Query the "h1" element
-let h1 = document.getElementsByTagName("h1");
+let h1 = document.querySelector("h1");
 
 // Update the font size, color and the alignment
 h1.style.fontSize = "24px";

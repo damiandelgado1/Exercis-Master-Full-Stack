@@ -7,5 +7,7 @@ paragraphs.forEach(paragraph => {
 
         // If they have it, it gets removed
         paragraph.classList.remove('hero');
+
+        console.log(paragraph);
     }
 });

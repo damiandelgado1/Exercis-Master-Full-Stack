@@ -1,5 +1,9 @@
 // Query "p" element with "class" attribute
-let paragraphs = document.querySelectorAll("p");
+let paragraphs = document.querySelectorAll("p[class]");
 
 // Desactivate "class" attribute of the last "p"
-paragraphs.removeAttribute(class);
+const lastParagraph = paragraphs[paragraphs.length - 1];
+
+lastParagraph.toggleAttribute("class");
+
+console.log(lastParagraph);

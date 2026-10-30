@@ -2,4 +2,4 @@
 let firstDivWithClass = document.querySelector("div.container");
 
 // Update the background-color to red
-firstDivWithClass.style.background-color = "red";
+firstDivWithClass.style.backgroundColor = "red";

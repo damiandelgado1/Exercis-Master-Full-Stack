@@ -6,7 +6,7 @@ const linkElement = document.createElement("a");
 linkElement.textContent = "Enlace";
 
 // Obtain the first element of the list
-const firstElement = list.firstElementChild("li");
+const firstElement = list.firstElementChild;
 
 // Remove the first element of the list
 firstElement.textContent = "";

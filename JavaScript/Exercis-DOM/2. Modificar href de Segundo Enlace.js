@@ -3,3 +3,5 @@ let link = document.getElementsByClassName("segundo-enlace");
 
 // Modify link by "https://www.google.com"
 link.href = "https://www.google.com";
+
+console.log(link);

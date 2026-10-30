@@ -1,5 +1,5 @@
 // Query the antepenultimate "p" of the "div"
-let penultimateParagraph = document.querySelectorAll("div > p:nth-last-of-type(3)");
+let penultimateParagraph = document.querySelector("div > p:nth-last-of-type(3)");
 
 // Verify if has the class "portatil"
 if (penultimateParagraph.classList.contains("portatil")) {

@@ -1,17 +1,17 @@
 // Query "body" element
-let body = document.getElementByTagName("body");
+let body = document.querySelector("body");
 
 // Create "h3" element
-const miTitulo = document.createElement(h3);
+const miTitulo = document.createElement("h3");
 
 // Insert "h3" element in body
 miTitulo.textContent = "Encabezado h3";
 
-document.appendChild.body(miTitulo);
+body.appendChild(miTitulo);
 
 // Add "span" element in body
-const newSpan = document.createElement(span);
+const newSpan = document.createElement("span");
 
 newSpan.textContent = "Soy nuevo";
 
-document.appendChild.miTitulo(newSpan);
+body.appendChild(newSpan);

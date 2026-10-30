@@ -1,5 +1,13 @@
 // Query the third "li" element of the all "ul"
-let thirdListElement = document.querySelector("ul > li:nth-of-type(3)");
+let lists = document.querySelectorAll("ul");
 
-// Append the text "Modificado" to the third "li" element
-thirdListElement.textContent = "Modificado";
+for (let list of lists) {
+    
+    // Obtain the third "li" element
+    const thirdListElement = list.children[2];
+    
+    // Append the text "Modificado" to the third "li" element
+    thirdListElement.textContent = "Modificado";
+    
+    console.log(thirdListElement);
+}

@@ -1,5 +1,5 @@
 // Query the "p" elements
-let paragraphs = document.querySelectorAll("p");
+let paragraphs = document.getElementById("parrafos");
 
 // Create a third element "p" with the text "soy el tres"
 const thirdParagraph = document.createElement("p");

@@ -2,13 +2,13 @@
 let divs = document.querySelectorAll("div");
 
 // Loop through the divs
-for (let div in divs) {
+for (let div of divs) {
     
     // Verify that it has the class attribute
     if (div.classList.contains("container")) {
         
         // If it has the class attribute, add the value "container"
-        div.classList.append("container");
+        div.classList.add("container");
 
         console.log(div);
     } else {

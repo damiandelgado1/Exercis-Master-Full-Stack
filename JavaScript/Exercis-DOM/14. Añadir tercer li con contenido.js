@@ -1,7 +1,14 @@
 // Query the "li" elements within a "ul"
-let listElement = document.querySelectorAll("ul li");
+let listElement = document.querySelectorAll("ul");
 
 // Add third "li" with content "tercer elemento"
-const thirdElement = listElement.appendChild("li");
+for (let list of listElement) {
 
-thirdElement.textContent("tercer elemento");
+    // Create third "li" element
+    const thirdElement = document.createElement("li");
+    
+    // Append content in third "li" element
+    thirdElement.textContent = "tercer elemento";
+    
+    list.appendChild(thirdElement);
+}
