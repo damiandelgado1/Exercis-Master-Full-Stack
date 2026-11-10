@@ -12,7 +12,7 @@ let imgUrls = [
 ];
 
 // Query the "img" elements
-let imgContainer = document.querySelector(".img");
+let imgContainer = document.querySelector(".image");
 
 // Listen the key event
 document.addEventListener("keydown", (event) => {
