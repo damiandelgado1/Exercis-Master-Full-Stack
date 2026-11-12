@@ -9,34 +9,34 @@ buttons.forEach(button => {
     button.addEventListener("click", (event) => {
     
         // If the user clicks the "a" button
-        if (event.currentTarget.textContent.trim() == "a") {
+        if (event.currentTarget.textContent.trim() == "A") {
             
             // Remove the all ocurrences of the vowel "a" from the paragraph text
-            paragraph.textContent = paragraph.textContent.replace(/a/gi, "");
+            paragraph.textContent = paragraph.textContent.replace(/A/gi, "");
     
         // If the user clicks the "e" button
-        } else if (event.currentTarget.textContent.trim() == "e") {
+        } else if (event.currentTarget.textContent.trim() == "E") {
             
             // Remove the all ocurrences of the vowel "e" from the paragraph text
-            paragraph.textContent = paragraph.textContent.replace(/e/gi, "");
+            paragraph.textContent = paragraph.textContent.replace(/E/gi, "");
     
         // If the user clicks the "i" button
-        } else if (event.currentTarget.textContent.trim() == "i") {
+        } else if (event.currentTarget.textContent.trim() == "I") {
     
             // Remove the all ocurrences of the vowel "i" from the paragraph text
-            paragraph.textContent = paragraph.textContent.replace(/i/gi, "");
+            paragraph.textContent = paragraph.textContent.replace(/I/gi, "");
     
         // If the user clicks the "o" button
-        } else if (event.currentTarget.textContent.trim() == "o") {
+        } else if (event.currentTarget.textContent.trim() == "O") {
     
             // Remove the all ocurrences of the vowel "o" from the paragraph text
-            paragraph.textContent = paragraph.textContent.replace(/o/gi, "");
+            paragraph.textContent = paragraph.textContent.replace(/O/gi, "");
     
         // If the user clicks the "u" button
-        } else if (event.currentTarget.textContent.trim() == "u") {
+        } else if (event.currentTarget.textContent.trim() == "U") {
     
             // Remove the all ocurrences of the vowel "u" from the paragraph text
-            paragraph.textContent = paragraph.textContent.replace(/u/gi, "");
+            paragraph.textContent = paragraph.textContent.replace(/U/gi, "");
     
         // If the paragraph text contains no vowels
         } else {
