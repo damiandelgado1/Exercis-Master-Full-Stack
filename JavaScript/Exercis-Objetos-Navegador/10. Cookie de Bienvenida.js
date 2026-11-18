@@ -1,33 +1,68 @@
-// Query the hidden message element, the text field to enter the user name and the button to sent name of the user name
-let hiddenMessage = document.querySelector(".mensajeOculto");
+// Query the text with hidden message of the page, the text field to enter the user name and button to save entered name by user
+let welcomeMessage = document.querySelector(".mensajeBienvenida");
 let enterName = document.querySelector(".ingresarNombre");
 let saveName = document.querySelector(".guardarNombre");
 
-// Listen for the clic event to send the user name
+// Create a object to save the visibility style
+const visibilityMessage = {
+    visibility: "visible"
+}
+
+// Read the visibility style of the object locally outside the event handler
+const visibility = JSON.parse(localStorage.getItem("visibility"));
+
+// Read the cookie and extract the name
+let welcomeCookie = document.cookie.split("; ").reduce((acc, curr) => {
+    const [key, value] = curr.split("=");
+    acc[key] = value;
+
+    return acc;
+}, {});
+
+const name = welcomeCookie.nombre || "";
+
+// If the visibility style of the object exist
+if (visibility && name) {
+
+    // Apply the visibility style and the name of the user to the welcome message
+    welcomeMessage.style.visibility = visibility.visibility;
+    welcomeMessage.textContent += `${name}`;
+}
+
+// Listen for the clic event
 saveName.addEventListener("click", (event) => {
     
-    // Get the value entered in the text field
-    const name = enterName.value;
+    // Get the value of the text field
+    const username = enterName.value;
 
-    // If the text field does not have a value
-    if (name === "") {
-
-        // Create a paragraph
-        let paragraph = document.createElement("p");
-
-        // Add content to the paragraph indicating that the user must enter a name to display the welcome message
-        paragraph.textContent = "Debe ingresar el nombre para mostrar el mensaje de bienvenida";
+    // If the value of the text field is empty
+    if (username === "") {
         
-    // If the text field has a value
+        // Create a paragraph
+        const infoMessage = document.createElement("p");
+        
+        // Add a message to the paragraph indicate what must enter a name to display message
+        infoMessage.textContent = "Debe ingresar un Nombre para mostrar el Mensaje de Bienvenida";
+
+        // Display the info message in the page
+        document.body.appendChild(infoMessage);
+    
+    // If the value of the text field has a name entered by the user
     } else {
 
-        // Define the cookie to save the entered name for 7 days
-        document.cookie = `nombre=${name}; expires=Mon, 23 Nov 2026 23 20:07:45 GMT; path=/; SameSite=Lax`;
+        // Create a cookie to storage the name entered by the user during 7 days
+        document.cookie = `nombre=${username}; expires=Tue, 24 Nov 2026 11:20:40 GMT; path=/; SameSite=Lax`;
         
-        // Remove the hidden attribute from the message element
-        hiddenMessage.removeAttribute("hidden");
+        // Save the visibility style of the welcome message locally
+        localStorage.setItem("visibility", JSON.stringify(visibilityMessage));
 
-        // Add the entered user name to the welcome message
-        hiddenMessage.textContent += name;
+        // Change the visibility of the welcome message
+        welcomeMessage.style.visibility = visibility.visibility;
+
+        // Add the name entered by the user to the welcome message
+        welcomeMessage.textContent += `${username}`;
+
+        // Clear the value of the text field
+        enterName.value = "";
     }
 });
