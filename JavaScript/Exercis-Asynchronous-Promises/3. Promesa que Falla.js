@@ -2,7 +2,7 @@
 let tryYourLuckyButton = document.querySelector(".probarSuerte");
 let emptyParagraph = document.querySelector(".parrafoVacio");
 
-// Listen for the click event the try your luck button
+// Listen for the click event on the try your luck button
 tryYourLuckyButton.addEventListener("click", (event) => {
 
     // Create a promise to try your luck
