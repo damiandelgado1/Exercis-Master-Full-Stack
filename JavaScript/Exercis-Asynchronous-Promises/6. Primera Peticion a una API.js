@@ -11,13 +11,11 @@ jokeButton.addEventListener("click", (event) => {
         // Wait the data request at the public API to get a joke
         const response = await fetch("https://dog.ceo/api/breeds/image/random");
 
-        console.log(response.status);
-
         // Convert the joke response in a JavaScript object
         const joke = await response.json();
-
-        // Add the joke to the paragraph
-        emptyParagraph.textContent = joke.message;
+        
+        // Add the image to display the joke to the paragraph
+        emptyParagraph.innerHTML = `<img src="${joke.message}" width=200>`;
     }
         
     // Call the asynchronous function to displaying the joke
