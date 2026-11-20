@@ -6,7 +6,7 @@ let emptyParagraph = document.querySelector(".parrafoVacio");
 loadButton.addEventListener("click", (event) => {
     
     // Create a promises to load the message
-    const promise = new Promise((resolve, reject) => {
+    const fulfilledPromise = new Promise((resolve, reject) => {
 
         // Add the message "Cargando..." to the paragrah
         emptyParagraph.textContent = "Cargando...";
@@ -33,9 +33,9 @@ loadButton.addEventListener("click", (event) => {
     });
 
     // Process the promise to load the message
-    promise
-        // If the promise is fulfilled, display that the promises was fulfilled
-        .then(valor => console.log("La promesa se completo: ", valor))
-        // If the promise is rejected, display that the promises has an error
-        .catch(error => console.log("La promesa no se completo: ", error));
+    fulfilledPromise
+        // If the promise is fulfilled, display that the promise was fulfilled
+        .then(fulfilledPromise => console.log("La promesa se completo: ", fulfilledPromise))
+        // If the promise is not fulfilled, display that the promise was not fulfilled
+        .catch(rejectedPromise => console.log("La promesa no se completo: ", rejectedPromise));
 });

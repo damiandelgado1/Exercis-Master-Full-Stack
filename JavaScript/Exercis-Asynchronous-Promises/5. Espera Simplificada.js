@@ -6,7 +6,7 @@ let emptyParagraph = document.querySelector(".parrafoVacio");
 startButton.addEventListener("click", (event) => {
     
     // Create a promise to display simplified wait
-    const promise = new Promise((resolve) => {
+    const simplifiedWait = new Promise((resolve) => {
 
         // Add the text "Paso 1" to the paragraph
         emptyParagraph.textContent = "Paso 1";
@@ -30,7 +30,9 @@ startButton.addEventListener("click", (event) => {
     });
     
     // Process the promise to display the simplified wait
-    promise
-        // Display the execution of the simplified wait
-        .then((waitCompleted) => console.log("La espera simplificada se ejecuto", waitCompleted));
+    simplifiedWait
+        // If the promise is fulfilled, display that the promise was fulfilled
+        .then(waitCompleted => console.log("La espera simplificada se ejecuto: ", waitCompleted))
+        // If the promise is not fulfilled, display that the promise was not fulfilled
+        .catch(waitFailed => console.log("La espera simplificada no se ejecuto: ", waitFailed));
 });

@@ -18,11 +18,19 @@ greetingButton.addEventListener("click", (event) => {
             resolve("Promesa ejecutada");
         }, 2000);
     });
+
     
     // Create a asynchronous function to greeting
     async function greeting() {
         // Wait for the promise to be fulfilled before displaying the greeting
         await greetingPromise;
+        
+        // Process the promise to display the delayed message
+        greetingPromise
+            // If the promise is fulfilled, display that the promise was fulfilled
+            .then(completedGreeting => console.log("La promesa se cumplio: ", completedGreeting))
+            // If the promise is not fulfilled, display that the promise was not fulfilled
+            .catch(failedGreeting => console.log("La promesa no se cumplio: ", failedGreeting));
     }
     
     greeting();

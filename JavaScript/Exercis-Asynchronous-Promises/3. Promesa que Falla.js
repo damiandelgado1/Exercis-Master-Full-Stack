@@ -6,7 +6,7 @@ let emptyParagraph = document.querySelector(".parrafoVacio");
 tryYourLuckyButton.addEventListener("click", (event) => {
 
     // Create a promise to try your luck
-    const promise = new Promise((resolve, reject) => {
+    const rejectedPromise = new Promise((resolve, reject) => {
 
         // Wait 1 second
         const messageState = window.setTimeout(() => {
@@ -36,9 +36,9 @@ tryYourLuckyButton.addEventListener("click", (event) => {
     });
             
     // Process the promise to load the message
-    promise
+    rejectedPromise
         // If the promise is fulfilled, display that the promise was fulfilled
-        .then(message => console.log("La promesa se cumplio: ", message))
+        .then(completedMessage => console.log("La promesa se cumplio: ", completedMessage))
         // If the promise is not fulfilled, display that the promise was not fulfilled
-        .catch(message => console.log("La promesa no se cumplio: ", message));
+        .catch(failedMessage => console.log("La promesa no se cumplio: ", failedMessage));
 });
